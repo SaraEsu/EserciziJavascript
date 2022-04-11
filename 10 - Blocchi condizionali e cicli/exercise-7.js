@@ -1,7 +1,7 @@
 function sumUntil(maxValue) {
-  let sum=1;
-  for(i=1;i<maxValue;i++){
-    sum+=i+1;
+  let sum=0;
+  for(i=1;i<=maxValue;i++){
+    sum+=i;
   }
   return(sum);
 }

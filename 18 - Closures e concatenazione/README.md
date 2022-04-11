@@ -8,3 +8,14 @@ console.log(factorial(10)); // Calculating result for 3628800
 console.log(factorial(6)); // Fetching from cache for 720
 console.log(factorial(5)); // Fetching from cache for 120
 ```
+
+
+Se il valore è stato già calcolato precedentemente restituire
+una stringa Fetching from cache for {valore_passato_in_input},
+altrimenti, se non è stato ancora calcolato, restituire una stringa:
+Calculating result for {valore_passato_in_input}. Inoltre modificare
+l'esempio in: factorial = memoize(factorial); console.log(factorial(10)); 
+// Calculating result for 10 console.log(factorial(6)); 
+// Calculating result for 6 console.log(factorial(5)); 
+// Calculating result for 5 console.log(factorial(5)); 
+// Fetching from cache for 5

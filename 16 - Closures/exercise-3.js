@@ -1,5 +1,8 @@
 function createStore() {
-  // ...
+  let arr=[];
+  return function(prod){
+    return (arr.push());
+  }
 }
 
 const redPants = { id: 1, name: 'Red Pants' };
