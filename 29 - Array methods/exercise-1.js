@@ -1,5 +1,6 @@
 function adultFilter(persons) {
-  // ...
+  let age =[];
+  let adult =
 }
 
 const persons = [

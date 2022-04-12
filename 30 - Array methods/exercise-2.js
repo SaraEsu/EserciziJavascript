@@ -1,5 +1,5 @@
 function nicknameMap(persons) {
-  // ...
+  
 }
 
 const persons = [

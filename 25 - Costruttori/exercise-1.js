@@ -1,35 +1,35 @@
-function Person() {
-  FirstName:"";
-  LastName:"";
+const Person = {
+  firstName:"",
+  lastName:"",
 
   get FirstName(){
-    return this.FirstName;
-  }
+    return this.firstName;
+  },
   set FirstName(par){
-    this.FirstName = par;
-  }
+    this.firstName = par;
+  },
 
-  getLastName(){
-    return this.LastName;
-  }
-  setLastName(){
-    this.LastName = par;
+  get LastName(){
+    return this.lastName;
+  },
+  set LastName(par){
+    this.lastName = par;
     
-  }
+  },
 
 fullName(){
   return (`${this.getFirstName} ${this.getLastName}`)
 }
-}
+};
 
-const john = Object.create(person);
-const simon = Object.create(person);
+const john = Object.create(Person);
+const simon = Object.create(Person);
 
-john.setFirstName ("John");
-john.setLastName ("Doe");
+john.FirstName ("John");
+john.LastName ("Doe");
 
-simon.setFirstName ("Simon");
-simon.setLastName ("Collins");
+simon.FirstName ("Simon");
+simon.LastName ("Collins");
 
 console.log(simon.getLastName)
 console.log(john.fullName()); // John Doe
