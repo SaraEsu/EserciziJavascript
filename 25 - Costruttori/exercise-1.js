@@ -1,36 +1,32 @@
-const Person = {
-  firstName:"",
-  lastName:"",
 
-  get FirstName(){
-    return this.firstName;
+const person = {
+  name:" ",
+  surname:" ",
+  get firstName(){
+    return this.name;
   },
-  set FirstName(par){
-    this.firstName = par;
+  set firstName(par){
+    this.name = par;
   },
-
-  get LastName(){
-    return this.lastName;
+  get lastName(){
+    return this.surname;
   },
-  set LastName(par){
-    this.lastName = par;
-    
+  set lastName(par){
+    this.surname = par;
   },
-
-fullName(){
-  return (`${this.getFirstName} ${this.getLastName}`)
-}
+  fullName(){
+    return(`${this.name} ${this.surname}`);
+  }
 };
 
-const john = Object.create(Person);
-const simon = Object.create(Person);
+const john = Object.create(person);
+const simon = Object.create(person);
 
-john.FirstName ("John");
-john.LastName ("Doe");
+john.firstName = "John";
+john.lastName = "Doe";
 
-simon.FirstName ("Simon");
-simon.LastName ("Collins");
+simon.firstName = "Simon";
+simon.lastName = "Collins";
 
-console.log(simon.getLastName)
 console.log(john.fullName()); // John Doe
 console.log(simon.fullName()); // Simon Collins

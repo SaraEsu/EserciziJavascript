@@ -1,5 +1,9 @@
 function nicknameMap(persons) {
-  
+  persons.map(item =>{
+    item=persons.name+persons.age;
+    return item;
+  })
+
 }
 
 const persons = [
