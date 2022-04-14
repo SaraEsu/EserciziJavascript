@@ -3,6 +3,7 @@ class Person {
     this.firstName = firstName;
     this.lastName = lastName;
   }
+  static 
 }
 
 const obj = {

@@ -1,7 +1,6 @@
 function firstUncompletedNote(notes) {
-  // ...
+  return notes.find((note)=>note.todos.some((todo)=>!todo.done));
 }
-
 const notes = [
   {
     id: 1,

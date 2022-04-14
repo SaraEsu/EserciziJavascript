@@ -1,5 +1,5 @@
 function uncompletedNotes(notes) {
-  // ...
+  return notes.filter((note)=>note.todos.some((todo)=>!todo.done));
 }
 
 const notes = [
