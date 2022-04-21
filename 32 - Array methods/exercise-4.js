@@ -53,5 +53,5 @@ const notes = [
 ]
 
 const notesInProgress = uncompletedNotes(notes);
-console.log('All notes: ', notes);
+/* console.log('All notes: ', notes); */
 console.log('Notes In Progress: ', notesInProgress);
