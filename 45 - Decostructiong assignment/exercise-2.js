@@ -5,9 +5,10 @@ const person = {
   age: 25
 };
 
-const id = person.id;
+/* const id = person.id;
 const firstName = person.firstName;
 const lastName = person.lastName;
-const age = person.age;
+const age = person.age; */
+const {id, firstName, lastName, age} = person
 
 console.log(id, firstName, lastName, age);
