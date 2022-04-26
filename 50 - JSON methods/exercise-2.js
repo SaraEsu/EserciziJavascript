@@ -6,10 +6,17 @@ class Person {
     this.age = age;
   }
 
+ 
   toJson() {
     return JSON.stringify(this);
   }
+  static fromJson(par){
+    return JSON.parse(par);
+
+  }
+
 }
+
 
 const json = '{"id":1,"firstName":"Mario","lastName":"Rossi","age":25}';
 const developer = Person.fromJson(json);

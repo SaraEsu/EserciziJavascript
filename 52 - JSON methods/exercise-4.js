@@ -1,9 +1,14 @@
 const person = {
   id: 1,
-  firstName: 'Mario',
-  lastName: 'Rossi',
+  firstName:'Mario',
+  lastName:'Rossi',
   age: 25,
 };
+
+person.firstName = undefined;
+person.lastName = undefined; 
+
+
 
 const json = JSON.stringify(person);
 
