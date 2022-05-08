@@ -3,4 +3,5 @@ const person = {
   lastName: 'Rossi',
   age: 25
 }
-console.log(Object.values(person));
+/* console.log(...Object.values(person)); */
+Object.values(person).forEach(function(value){console.log(value)});

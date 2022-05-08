@@ -1,3 +1,4 @@
+const prompt = require('prompt-sync')();
 const persons = [
   {
     id: 1,
@@ -33,4 +34,8 @@ function fetchPersonById(id) {
   });
 }
 
-// core here
+let inputId = prompt(`Inserisci un id `);
+inputId = inputId * 1;
+fetchPersonById(inputId)
+.then((ok) => console.log(JSON.parse(ok)))
+.catch((no) => console.log(no));

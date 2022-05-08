@@ -15,5 +15,5 @@ console.log(person2);
 /*Viene modificato anche l'oggetto 'person1'
  perché gli oggetti non vengono modificati per valore
  (come nel caso delle variabili),
- ma per il riferimento allo spazio di memori.
+ ma per il riferimento allo spazio di memoria.
  */

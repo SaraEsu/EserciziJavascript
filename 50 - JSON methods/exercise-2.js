@@ -10,11 +10,11 @@ class Person {
   toJson() {
     return JSON.stringify(this);
   }
+
   static fromJson(par){
-    return JSON.parse(par);
-
+   const parsedObj = JSON.parse(par); 
+   return new this(parsedObj.id,parsedObj.firstName,parsedObj.lastName,parsedObj.age);   
   }
-
 }
 
 

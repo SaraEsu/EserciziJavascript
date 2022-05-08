@@ -34,4 +34,3 @@ const jobs = [
   }
 ];
 
-// core here

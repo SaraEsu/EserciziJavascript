@@ -1,3 +1,4 @@
+const prompt = require('prompt-sync')();
 const persons = [
   {
     id: 1,
@@ -20,7 +21,16 @@ const persons = [
 ];
 
 function fetchPersonById(id) {
-  // code here
+  return new Promise((resolve,reject)=>{
+    if(persons.find(person => person.id == id)){
+      resolve(persons.find(person =>person.id == id));
+    }
+    else{
+      reject(`${id} non è un id`);
+    }
+  });
 }
-
-// code here
+let inputId = prompt("Inserisci un id ");
+fetchPersonById(inputId)
+.then(ok => console.log(ok))
+.catch(no => console.log(no));

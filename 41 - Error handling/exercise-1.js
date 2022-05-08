@@ -6,13 +6,38 @@ class BankAccount {
   }
 
   deposit(amount) {
-    // throw an exception if amount is negative
-    this.#amount += amount;
+    try {
+
+      if (amount<0) {
+        throw new Error("C'è un errore!"); 
+      }
+      else{
+        this.#amount += amount;
+      }
+    
+    } catch (err) {
+      console.log('message', err.message);
+      
+    }
   }
 
   withdraw(amount) {
-    // throw an exception if amount is negative or if withdrawal amount is greater than current amount
+    
+try {
+
+  if (amount>0 || this.#amount>amount) {
+    throw new Error("C'è un errore!"); 
+  }
+  else{
     this.#amount -= amount;
+  }
+
+} catch (err) {
+
+  console.log('stack', err.stack);
+}
+  
+
   }
 
   view() {

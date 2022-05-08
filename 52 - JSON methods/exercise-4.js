@@ -5,8 +5,12 @@ const person = {
   age: 25,
 };
 
-person.firstName = undefined;
-person.lastName = undefined; 
+
+for(values in person){
+if(typeof(values) === "String"){
+  delete person.values;
+}
+}
 
 
 
