@@ -1,3 +1,4 @@
+const prompt = require('prompt-sync')();
 const persons = [
   {
     id: 1,
@@ -34,4 +35,37 @@ const jobs = [
   }
 ];
 
-// core here
+function fetchPersonById(id){
+  return new Promise((resolve,reject)=>{
+    setTimeout(() =>{
+    let yep = persons.find(person => person.id === id);
+    if(yep){
+      return resolve(yep)
+    }
+    else{
+      return reject(`${id} is an invalid id`)
+    }
+  })
+},1000)
+}
+
+function fetchJobById(id){
+  return new Promise((resolve,reject)=>{
+    setTimeout(() =>{
+    let ok = jobs.find(job => job.id === id);
+    if(ok){
+      return resolve(ok)
+    }
+    else{
+      return reject(`${id} is an invalid id`)
+    }
+  })
+},500)
+} 
+
+
+let input = prompt("Inserisci un id ");
+input = input*1; 
+Promise.race([fetchPersonById(input),fetchJobById(input)])
+.then((values) => console.log(values))
+.catch((err) => console.log(err));

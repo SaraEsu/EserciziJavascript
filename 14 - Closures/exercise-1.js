@@ -1,6 +1,6 @@
 function greet(greeting) {
   return function(name){
-    return(`${greeting} ${name}`)
+    return(`${greeting}, ${name}`)
   }
 }
 

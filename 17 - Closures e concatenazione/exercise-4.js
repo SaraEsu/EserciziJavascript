@@ -3,7 +3,7 @@ function calculate() {
   return {
     add(num) {
       result += num;
-      return this;
+      return (`$this`);
     },
     multiply(num) {
       result *= num;

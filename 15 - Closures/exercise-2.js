@@ -1,7 +1,14 @@
-function pow(base) {
+ function pow(base) {
   return (exponent) =>
-    base ** exponent;
+   base ** exponent;
 }
+ 
+
+/* function pow(base) {
+  return function(exponent) {
+  return (Math.pow(base,exponent))
+}
+} */
 
 const pow2 = pow(2);
 const pow5 = pow(5);
