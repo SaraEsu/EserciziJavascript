@@ -1,29 +1,29 @@
 class Person {
-  constructor(firstName,lastName,age){
-    this.name = firstName;
-    this.surname = lastName;
-    this._age = age;
+  constructor(name,surname,personAge){
+    this.firstName = name;
+    this.lastName = surname;
+    this.age = personAge;
   }
-  get firstName(){
+  get FirstName(){
     return this.name;
   }
-  set firstName(value){
-    this.name = value;
+  set FirstName(value){
+    this.firstName = value;
   }
-  get lastName(){
+  get LastName(){
     return this.surname;
   }
-  set lastName(value){
-    this.surname = value;
+  set LastName(value){
+    this.lastName = value;
   }
-  get age(){
-    return this._age;
+  get PersonAge(){
+    return this.personAge;
   }
-  set age(value){
-    this._age = value;
+  set PersonAge(value){
+    this.age = value;
   }
   get fullName(){
-    return `${this.name} ${this.surname}` 
+    return `${this.firstName} ${this.lastName}` 
   }
 }
 
