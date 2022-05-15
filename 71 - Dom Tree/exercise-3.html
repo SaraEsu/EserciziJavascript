@@ -20,5 +20,17 @@
 </html>
 
 <script>
-  // code here
+  const label = document.querySelectorAll('label');
+  const labelName = label[0].innerText;
+  const labelSurn = label[1].innerText;
+  const labelAgee = label[2].innerText;
+  const name = document.getElementById('firstName').value;
+  const surname = document.getElementById('lastName').value;
+  const age = document.getElementById('age').value;
+
+  console.log(`
+     ${labelName} ${name}
+     ${labelSurn} ${surname}
+     ${labelAgee} ${age}`);
+     
 </script>

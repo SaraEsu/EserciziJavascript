@@ -1,24 +1,37 @@
 <html>
-  <body>
-    <div id="container">
-      <form>
-        <div>
-          <label>First Name:</label>
-          <input type="text" class="form-input" id="firstName" value="Mario"/>
-        </div>
-        <div>
-          <label>Last Name:</label>
-          <input type="text" class="form-input" id="lastName" value="Rossi"/>
-        </div>
-        <div>
-          <label>Age:</label>
-          <input type="number" class="form-input" id="age" value="25"/>
-        </div>
-      </form>
-    </div>
-  </body>
+
+<body>
+  <div id="container">
+    <form>
+      <div>
+        <label>First Name:</label>
+        <input type="text" class="form-input" id="firstName" value="Mario" />
+      </div>
+      <div>
+        <label>Last Name:</label>
+        <input type="text" class="form-input" id="lastName" value="Rossi" />
+      </div>
+      <div>
+        <label>Age:</label>
+        <input type="number" class="form-input" id="age" value="25" />
+      </div>
+    </form>
+  </div>
+</body>
+
 </html>
 
 <script>
-  // code here
+  
+  const name = document.getElementById('firstName').value;
+  const surname = document.getElementById('lastName').value;
+  const age = document.getElementById('age').value;
+  let person = {
+    name: name.value,
+    surname: surname.value,
+    age: age.value
+  };
+  const formElement = document.querySelector('form');
+  formElement.setAttribute('data-person', JSON.stringify(person));
+
 </script>

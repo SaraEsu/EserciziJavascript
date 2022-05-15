@@ -12,7 +12,7 @@
         <input type="checkbox" id="todo-completed" />
       </div>
 
-      <button type="submit" id="submit-todo"></button>
+      <button type="submit" id="submit-todo">SUBMIT</button>
     </form>
   </div>
 </body>
@@ -20,13 +20,26 @@
 </html>
 
 <script>
-  async function request() {
-      fetch('https://jsonplaceholder.typicode.com/posts', {
+  let pack;
+
+  function request() {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
         method: 'post',
         headers: {
-          'content-type': 'application/json'
+          'Content-Type': 'application/json'
         },
-        body:JSON.stringify({title: 'completed'})
+        body: JSON.stringify({
+          title: document.getElementById('todo-title').value,
+          completed: document.getElementById('todo-completed').checked
+        })
+
       })
-    }
+      .then(response => response.json())
+      .then(json => console.log(json))
+  }
+  let submit = document.querySelector('#submit-todo');
+  submit.addEventListener('click', event => {
+    event.preventDefault()
+    request();
+  })
 </script>

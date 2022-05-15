@@ -1,4 +1,4 @@
-function sum(...num1) {
+ function sum(...num1) {
   return num1.reduce((value,current)=>value+current,0);
 }
 

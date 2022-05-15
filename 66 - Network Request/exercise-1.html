@@ -1,11 +1,25 @@
 <html>
-  <body>
-    <div id="container">
-      <ul class="todo-list"></ul>
-    </div>
-  </body>
+
+<body>
+  <div id="container">
+    <ul class="todo-list"></ul>
+  </div>
+</body>
+
 </html>
 
 <script>
- fetch('https://jsonplaceholder.typicode.com/todos')
+  let pack;
+  async function getTodo() {
+    const request = await fetch('https://jsonplaceholder.typicode.com/todos')
+      .then(response => response.json())
+      .then(json => pack = json)
+    pack.forEach(element => {
+      let li = document.createElement('li');
+      li.innerText = element.title;
+      ul = document.querySelector('.todo-list');
+      ul.append(li);
+    });
+  }
+  getTodo();
 </script>
