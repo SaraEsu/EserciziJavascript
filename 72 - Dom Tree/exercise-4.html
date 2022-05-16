@@ -27,11 +27,10 @@
   const surname = document.getElementById('lastName').value;
   const age = document.getElementById('age').value;
   let person = {
-    name: name.value,
-    surname: surname.value,
-    age: age.value
+    name: name,
+    surname: surname,
+    age: age
   };
   const formElement = document.querySelector('form');
   formElement.setAttribute('data-person', JSON.stringify(person));
-
 </script>

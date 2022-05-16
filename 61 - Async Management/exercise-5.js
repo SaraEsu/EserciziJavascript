@@ -45,9 +45,9 @@ function fetchPersonById(id){
     else{
       return reject(`${id} is an invalid id`)
     }
-  })
-},1000)
+  },1000)})
 }
+
 
 function fetchJobById(id){
   return new Promise((resolve,reject)=>{
@@ -59,9 +59,9 @@ function fetchJobById(id){
     else{
       return reject(`${id} is an invalid id`)
     }
-  })
-},500)
-} 
+  },500)} )
+}
+
 
 
 let input = prompt("Inserisci un id ");

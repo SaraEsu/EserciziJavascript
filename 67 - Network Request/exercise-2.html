@@ -21,14 +21,12 @@
     let cointainer = document.getElementById('container');
     container.appendChild(h2);
     h2.append(pack.title);
-    console.log(h2);
     let checkbox = document.createElement('input');
     checkbox.setAttribute('type', 'checkbox');
+    if(request.completed===true){
     checkbox.setAttribute('checked', true);
+    }
     container.appendChild(checkbox);
-    console.log(checkbox);
-    console.log(container);
-
   }
   getTodo();
 </script>
